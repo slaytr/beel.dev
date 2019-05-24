@@ -4,9 +4,18 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div class="w3-content w3-margin-top" style={{maxWidth:1400}}>
-        <div class="w3-row-padding">
+    <div className="Portfolio">
+      <navbar>
+        <ul>
+          <li><a class="active" href="#home">Resume</a></li>
+          <li><a href="#news">Tech Stack</a></li>
+          <li><a href="#contact">My Story</a></li>
+          <li><a href="#about">Projects</a></li>
+        </ul>
+      </navbar>
+
+      <section class="w3-content w3-margin-top" style={{maxWidth:1400}}>
+        <div class="w3-row-padding" style={{marginTop: 70}}>
           <div class="w3-third">
             <div class="w3-white  w3-margin-bottom w3-text-grey w3-card-4">
               <div class="w3-container">
@@ -20,31 +29,32 @@ function App() {
               </div>
             </div>
             <div class="w3-white w3-text-grey w3-card-4">
-              <div class="w3-container">
-                <p class="w3-large"><b>Languages</b></p>
-                <p>Adobe Photoshop</p>
+              <div class="w3-container" style={{textAlign: "left"}}>
+                <p class="w3-large"><b>Fields of Expertise</b></p>
+                <p>Frontend</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                  <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "80%"}}>80%</div>
+                </div>
+                <p>Backend</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                  <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "70%"}}>
+                    <div class="w3-center w3-text-white">70%</div>
+                  </div>
+                </div>
+                <p>CI/CD</p>
                 <div class="w3-light-grey w3-round-xlarge w3-small">
                   <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "90%"}}>90%</div>
                 </div>
-                <p>Photography</p>
+                <p>Algorithms</p>
                 <div class="w3-light-grey w3-round-xlarge w3-small">
-                  <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "80%"}}>
-                    <div class="w3-center w3-text-white">80%</div>
-                  </div>
-                </div>
-                <p>Illustrator</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                  <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "75%"}}>75%</div>
-                </div>
-                <p>Media</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                  <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "50%"}}>50%</div>
+                  <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "90%"}}>90%</div>
                 </div>
                 <br />
 
                 <p class="w3-large w3-text-theme"><b>Spoken Languages</b></p>
                 <p>English</p>
                 <p>Mandarin</p>
+                <hr/>
               </div>
             </div>
             <br />
@@ -56,49 +66,46 @@ function App() {
             <div class="w3-container w3-card w3-white w3-margin-bottom">
               <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-green"></i>Work Experience</h2>
               <div class="w3-container">
-                <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
-                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-green w3-round">Current</span></h6>
-                <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                <h5><b>Software Engineer / Nyriad</b></h5>
+                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2018 - Feb 2019</h6>
+                <p>Redesigned and improved legacy infrastructure code leading to a 100,000% increase in software processing speed.</p>
+                <p>Developed a new product feature, a benchmarking tool that measures performance without requiring external programs.</p>
+                <p>Created, compiled and installed a custom configured linux kernel for automated CI/CD tests in a containerized environment.</p>
+                <p>Developed and tested product features with respect to ISO 12207 and ISO 90003.</p>
+                <p>Helped train and onboard interns as they transition to developer roles</p>
                 <hr />
               </div>
               <div class="w3-container">
-                <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
-                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-                <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                <h5><b>Tech Consultant / Reach NZ</b></h5>
+                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2017 - Aug 2018</h6>
+                <p>Testing of customer facing IT infrastructure to ensure robustness and quality</p>
+                <p>Developed an electronic data entry tool to replace legacy methods. RaspPi hosted RDBMS server</p>
+                <p>Frequent interaction with stakeholders and customers to gather requirements.</p>
                 <hr />
-              </div>
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
-                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br />
               </div>
             </div>
 
             <div class="w3-container w3-card w3-white">
               <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-green"></i>Education</h2>
               <div class="w3-container">
-                <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
-                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-                <p>Web Development! All I need to know in one place</p>
+                <h5 class="w3-opacity"><b>University of Auckland, New Zealand</b></h5>
+                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014-2018</h6>
+                <p>Bachelor of Science, Computer Science</p>
+                <p>Applied Algorithms, Distributed Databases and Computational Logic</p>
                 <hr />
               </div>
               <div class="w3-container">
-                <h5 class="w3-opacity"><b>London Business School</b></h5>
-                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-                <p>Master Degree</p>
+                <h5 class="w3-opacity"><b>Auckland International College, New Zealand</b></h5>
+                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2013</h6>
+                <p>International Baccalaureate</p><p> Higher Level - English, Biology, Mathmatics</p>
                 <hr />
-              </div>
-              <div class="w3-container">
-                <h5 class="w3-opacity"><b>School of Coding</b></h5>
-                <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-                <p>Bachelor Degree</p><br />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <footer class="w3-container w3-green w3-center w3-margin-top" style={{padding: 10}}>
+      <footer class="w3-container w3-green w3-center w3-margin-top" style={{padding: 20}}>
         <a href="https://github.com/slaytr">
           <i class="fa fa-github w3-hover-opacity" style={{marginRight: 20, fontSize: 40}}></i>
         </a>
