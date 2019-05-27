@@ -9,7 +9,7 @@ class Resume extends React.Component {
       <div class="w3-content w3-margin-top" style={{maxWidth:1400}}>
         <div class="w3-row-padding">
           <div class="w3-third">
-            <div class="w3-white  w3-margin-bottom w3-text-grey w3-card-4">
+            <div class="w3-white  w3-margin-bottom w3-text-grey w3-card-1">
               <div class="w3-container">
                 <h1 class="w3-text-dark-grey" style={{paddingTop: 16}}>Bill Li</h1>
                 <hr />
@@ -20,7 +20,7 @@ class Resume extends React.Component {
                 <hr />
               </div>
             </div>
-            <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-white w3-text-grey w3-card-1">
               <div class="w3-container" style={{textAlign: "left"}}>
                 <p class="w3-large"><b>Fields of Expertise</b></p>
                 <p>Frontend</p>

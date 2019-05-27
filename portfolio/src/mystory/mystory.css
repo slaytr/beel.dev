@@ -1,7 +1,16 @@
 .storyWrapper {
-  
+  background-image: url("https://s3-ap-southeast-2.amazonaws.com/billdevcodepenimages/598.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
 
 .storyBox {
   margin: 16px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px){
+  .storyWrapper{
+    background-size: 100vw;
+  }
 }
