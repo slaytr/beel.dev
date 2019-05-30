@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      navState: "story",
+      navState: "dev",
       barMenu: "hide",
       height: window.innerHeight,
       width: window.innerWidth
@@ -98,26 +98,26 @@ class App extends React.Component {
               onClick={this.handleClickDev}>Dev</li>
         </ul>): (
           <ul className="topbar">
-          <li className="menu-item" style={{float: "right", marginRight: 10}} onClick={this.handleClickMenu}><i class="fas fa-bars"></i></li>
+          <li className="menu-item" style={{float: "right"}} onClick={this.handleClickMenu}><i class="fas fa-bars" style={{paddingLeft:10, paddingRight:10}}></i></li>
           <li className={this.state.navState === "story"
               ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
-              style={{float: "none", marginTop: 50}}
+              style={{float: "none", textAlign: "left"}}
               onClick={this.handleClickStory}>My Story</li>
           <li className={this.state.navState === "resume"
               ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
-              style={{float: "none"}}
+              style={{float: "none", textAlign: "left"}}
               onClick={this.handleClickResume}>Resume</li>
           <li className={this.state.navState === "stack"
               ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
-              style={{float: "none"}}
+              style={{float: "none", textAlign: "left"}}
               onClick={this.handleClickStack}>My Stack</li>
           <li className={this.state.navState === "projects"
               ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
-              style={{float: "none"}}
+              style={{float: "none", textAlign: "left"}}
               onClick={this.handleClickProjects}>Projects</li>
           <li className={this.state.navState === "dev"
               ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
-              style={{float: "none"}}
+              style={{float: "none", textAlign: "left"}}
               onClick={this.handleClickDev}>Dev</li>
           </ul>
         )}
