@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Resume from './resume/resume'
 import TechStack from './techstack/techstack'
@@ -12,82 +11,179 @@ class App extends React.Component {
     super(props)
     this.state = {
       navState: "story",
-      mobileView: "off",
+      barMenu: "hide",
+      height: window.innerHeight,
+      width: window.innerWidth
     }
   }
 
+  componentDidMount() {
+    console.log(this.state.height);
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  updateDimensions = () => {
+    this.setState({height: window.innerHeight, width: window.innerWidth});
+  }
+
   handleClickResume = () => {
-    this.setState(state => ({
-        navState: "resume"
-    }));
+    this.setState(state => ({navState: "resume"}));
+    window.scrollTo(0, 0);
+    window.history.replaceState(null, null, 'resume');
+    this.setState(state => ({barMenu: "hide"}));
   };
   handleClickStack = () => {
-    this.setState(state => ({
-        navState: "stack"
-    }));
+    this.setState(state => ({navState: "stack"}));
+    window.scrollTo(0, 0);
+    window.history.replaceState(null, null, 'stack');
+    this.setState(state => ({barMenu: "hide"}));
   };
   handleClickStory = () => {
-    this.setState(state => ({
-        navState: "story"
-    }));
+    this.setState(state => ({navState: "story"}));
+    window.scrollTo(0, 0);
+    window.history.replaceState(null, null, 'story');
+    this.setState(state => ({barMenu: "hide"}));
   };
   handleClickProjects = () => {
-    this.setState(state => ({
-        navState: "projects"
-    }));
+    this.setState(state => ({navState: "projects"}));
+    window.scrollTo(0, 0);
+    window.history.replaceState(null, null, 'projects');
+    this.setState(state => ({barMenu: "hide"}));
   };
   handleClickDev = () => {
-    this.setState(state => ({
-        navState: "dev"
-    }));
+    this.setState(state => ({navState: "dev"}));
+    window.scrollTo(0, 0);
+    window.history.replaceState(null, null, 'dev');
+    this.setState(state => ({barMenu: "hide"}));
   };
+  handleClickMenu = () => {
+    if (this.state.barMenu === "hide"){
+    this.setState(state => ({barMenu: "show"}));
+  } else {
+    this.setState(state => ({barMenu: "hide"}));
+  }
+  };
+  showDropdownMenu = (event) => {
+      event.preventDefault();
+      this.setState({ displayMenu: true }, () => {
+      document.addEventListener('click', this.hideDropdownMenu);
+      });
+    }
+    hideDropdownMenu = () => {
+  this.setState({ displayMenu: false }, () => {
+    document.removeEventListener('click', this.hideDropdownMenu);
+  });
 
-  render(){
-  return (
-    <div className="Portfolio">
+}
+  render() {
+    return (
+      <div className="Portfolio">
       <navbar>
+            {this.state.width > 600 ? (
         <ul className="topbar">
-          <li className={this.state.navState === "story" ? "active menu-item" : "menu-item"} onClick={this.handleClickStory}>My Story</li>
-          <li className={this.state.navState === "resume" ? "active menu-item" : "menu-item"} onClick={this.handleClickResume}>Resume</li>
-          <li className={this.state.navState === "stack" ? "active menu-item" : "menu-item"} onClick={this.handleClickStack}>My Stack</li>
-          <li className={this.state.navState === "projects" ? "active menu-item" : "menu-item"} onClick={this.handleClickProjects}>Projects</li>
-          <li className={this.state.navState === "dev" ? "active menu-item" : "menu-item"} onClick={this.handleClickDev}>Dev</li>
-        </ul>
+          <li className={this.state.navState === "story"
+              ? "active menu-item" : "menu-item"}
+              onClick={this.handleClickStory}>My Story</li>
+          <li className={this.state.navState === "resume"
+              ? "active menu-item" : "menu-item"}
+              onClick={this.handleClickResume}>Resume</li>
+          <li className={this.state.navState === "stack"
+              ? "active menu-item" : "menu-item"}
+              onClick={this.handleClickStack}>My Stack</li>
+          <li className={this.state.navState === "projects"
+              ? "active menu-item" : "menu-item"}
+              onClick={this.handleClickProjects}>Projects</li>
+          <li className={this.state.navState === "dev"
+              ? "active menu-item" : "menu-item"}
+              onClick={this.handleClickDev}>Dev</li>
+        </ul>): (
+          <ul className="topbar">
+          <li className="menu-item" style={{float: "right", marginRight: 10}} onClick={this.handleClickMenu}><i class="fas fa-bars"></i></li>
+          <li className={this.state.navState === "story"
+              ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
+              style={{float: "none", marginTop: 50}}
+              onClick={this.handleClickStory}>My Story</li>
+          <li className={this.state.navState === "resume"
+              ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
+              style={{float: "none"}}
+              onClick={this.handleClickResume}>Resume</li>
+          <li className={this.state.navState === "stack"
+              ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
+              style={{float: "none"}}
+              onClick={this.handleClickStack}>My Stack</li>
+          <li className={this.state.navState === "projects"
+              ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
+              style={{float: "none"}}
+              onClick={this.handleClickProjects}>Projects</li>
+          <li className={this.state.navState === "dev"
+              ? "active menu-item " + this.state.barMenu : "menu-item " + this.state.barMenu}
+              style={{float: "none"}}
+              onClick={this.handleClickDev}>Dev</li>
+          </ul>
+        )}
       </navbar>
-      <section class={this.state.navState === "story" ? "story" : "story hide"} >
-        <MyStory />
-      </section>
-      <section class={this.state.navState === "resume" ? "resume" : "resume hide"} >
-        <Resume />
-      </section >
-      <section class={this.state.navState === "stack" ? "stack" : "stack hide"} >
-        <TechStack />
-      </section>
-      <section class={this.state.navState === "projects" ? "projects" : "projects hide"} >
-        <Projects />
-      </section>
-      <section class={this.state.navState === "dev" ? "dev" : "dev hide"} >
-        <DevChecklist />
+
+      <section className="PortfolioPages">
+        {
+          this.state.navState === "story"
+            ? <MyStory onClick={this.showDropdownMenu}/>
+            : null
+        }
+        {
+          this.state.navState === "resume"
+            ? <Resume clickStack={this.handleClickStack}/>
+            : null
+        }
+        {
+          this.state.navState === "stack"
+            ? <TechStack/>
+            : null
+        }
+        {
+          this.state.navState === "projects"
+            ? <Projects/>
+            : null
+        }
+        {
+          this.state.navState === "dev"
+            ? <DevChecklist/>
+            : null
+        }
       </section>
 
-      <footer class="w3-container w3-green w3-center w3-margin-top" style={{padding: 20}}>
+      <footer class="w3-container w3-green w3-center w3-margin-top" style={{
+          padding: 20
+        }}>
         <a href="https://github.com/slaytr">
-          <i class="fab fa-github w3-hover-opacity" style={{marginRight: 20, fontSize: 40}}></i>
+          <i class="fab fa-github w3-hover-opacity" style={{
+              marginRight: 20,
+              fontSize: 40
+            }}></i>
         </a>
         <a href="https://www.linkedin.com/in/bill-li-7b654394/">
-          <i class="fab fa-linkedin-in w3-hover-opacity" style={{marginRight: 20, fontSize: 40}}></i>
+          <i class="fab fa-linkedin-in w3-hover-opacity" style={{
+              marginRight: 20,
+              fontSize: 40
+            }}></i>
         </a>
         <a href="https://codepen.io/slaytr/pen/arqvYM">
-          <i class="fab fa-codepen w3-hover-opacity" style={{marginRight: 15, fontSize: 40}}></i>
+          <i class="fab fa-codepen w3-hover-opacity" style={{
+              marginRight: 15,
+              fontSize: 40
+            }}></i>
         </a>
         <a href="https://leetcode.com/slaytr/">
-        <span class="iconify w3-hover-opacity" data-icon="simple-icons:leetcode" data-inline="false" style={{fontSize: 35}}></span>
+          <span class="iconify w3-hover-opacity" data-icon="simple-icons:leetcode" data-inline="false" style={{
+              fontSize: 35
+            }}></span>
         </a>
       </footer>
 
-    </div>
-  );
-}
+    </div>);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
 }
 
 export default App;

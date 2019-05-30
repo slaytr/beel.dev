@@ -1,9 +1,7 @@
 import React from 'react';
+import './resume.css'
 
 class Resume extends React.Component {
-  constructor(props){
-    super(props)
-  }
   render() {
     return (
       <div class="w3-content w3-margin-top" style={{maxWidth:1400}}>
@@ -45,11 +43,16 @@ class Resume extends React.Component {
                 <div class="w3-light-grey w3-round-xlarge w3-small">
                   <div class="w3-container w3-center w3-round-xlarge w3-green" style={{width: "90%"}}>90%</div>
                 </div>
-                <br />
+                <hr />
 
                 <p class="w3-large w3-text-theme"><b>Spoken Languages</b></p>
                 <p>English</p>
                 <p>Mandarin</p>
+                <hr />
+                <div className="resumeToStack" onClick={this.props.clickStack}>
+                <h2 class="w3-large w3-text-theme" style={{textAlign: "center"}}><b>My Stack</b></h2>
+                <p style={{textAlign: "center"}}>Languages, Technologies, etc</p>
+                </div>
                 <hr />
               </div>
             </div>
@@ -76,7 +79,7 @@ class Resume extends React.Component {
                 <h5 class="w3-text-dark-grey"><b>Tech Consultant<div className="weblink"> <a href="http://www.reach17.co.nz">Reach NZ</a></div></b></h5>
                 <h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2017 - Aug 2018</h6>
                 <p>Testing of customer facing IT infrastructure to ensure robustness and quality, experience with Eftpos and other point of sale systems.</p>
-                <p>Developed an electronic data entry tool to replace legacy data entry methods. Set up a RaspPi hosted RDBMS server, fitted with a user interface for use by retailer workers.</p>
+                <p>Developed an electronic data entry tool to replace legacy data entry methods. Set up a RaspPi hosted RDBMS server, fitted with a user interface for use by retail employees.</p>
                 <p>Frequent interaction with stakeholders and customers to gather their requirements in an iterative process to ensure the production release was as close to their specifications as possible.</p>
                 <hr />
               </div>

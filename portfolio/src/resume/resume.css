@@ -1,0 +1,9 @@
+.resumeToStack {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.resumeToStack:hover {
+  background: #4CAF50;
+  color: #FFFFFF;
+  border-radius: 30px;
+}

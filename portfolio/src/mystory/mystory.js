@@ -1,10 +1,7 @@
 import React from 'react';
-import mystory from './mystory.css'
+import './mystory.css';
 
 class MyStory extends React.Component {
-  constructor(props){
-    super(props)
-  }
   render() {
     return (
       <div class="w3-content storyWrapper"  style={{maxWidth:1400}}>
