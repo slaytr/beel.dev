@@ -1,20 +1,17 @@
 import React from 'react';
-import './checklist.css'
+import './dev.css'
 
-class DevChecklist extends React.Component {
+class Dev extends React.Component {
   render() {
     return (
-      <div class="w3-content w3-margin-top" style={{maxWidth: 1400}}>
-        <div class="w3-row-padding">
-          <div class="w3-third">
-            <div class="w3-white w3-margin-bottom w3-text-grey w3-card">
-            <div className="w3-container devCard" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-              <img src="https://pkf-francisclarkcareers.co.uk/wp-content/uploads/2017/10/placeholder.png" alt="placeholder" style={{width: 180}}/>
-            </div>
-            </div>
-            <br />
+      <div style={{maxWidth: 1400}}>
+        <div className="devBox">
+          <div className="devCard">
+            <p> hello </p>
           </div>
-          <div class="w3-twothird">
+        </div>
+        <div class="w3-row-padding">
+          <div class="w3-rest-padding">
             <div class="w3-container w3-card w3-white w3-margin-bottom devCard" style={{textAlign: "left"}}>
               <h2 class="w3-text-dark-grey w3-padding-16">History API</h2>
                 <h5 class="w3-text-grey">
@@ -30,15 +27,7 @@ class DevChecklist extends React.Component {
           </div>
         </div>
         <div class="w3-row-padding">
-          <div class="w3-third">
-            <div class="w3-white w3-margin-bottom w3-text-grey w3-card">
-              <div className="w3-container devCard" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <img src="https://pkf-francisclarkcareers.co.uk/wp-content/uploads/2017/10/placeholder.png" alt="placeholder" style={{width: 180}}/>
-              </div>
-            </div>
-            <br />
-          </div>
-          <div class="w3-twothird">
+          <div class="w3-rest-padding">
             <div class="w3-container w3-card w3-white w3-margin-bottom devCard" style={{textAlign: "left"}}>
               <h2 class="w3-text-dark-grey w3-padding-16">Mobile Dropdown Menu</h2>
                 <h5 class="w3-text-grey">
@@ -58,4 +47,4 @@ class DevChecklist extends React.Component {
   }
 }
 
-export default DevChecklist;
+export default Dev;

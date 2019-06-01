@@ -1,0 +1,20 @@
+.Portfolio {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  min-height: 100vh;
+  text-align: center;
+}
+.PortfolioPage{
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,21 @@
+.devCard {
+  min-height: 80%;
+  color: #DDDDDD;
+  background-color: #131313;
+  box-shadow: 0px 5px 5px 1px #777777;
+  border-radius: 2px;
+}
+
+.devBox {
+  height: 100px;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .devBox {
+    height: auto;
+  }
+}
