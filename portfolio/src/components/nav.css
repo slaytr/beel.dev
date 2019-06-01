@@ -24,15 +24,9 @@
   background-color: #ddd;
 }
 
-.mobile-menu-item {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.mobile-menu-item:hover:not(.active) {
-  background-color: #ddd;
+.mobile {
+  float: none;
+  text-align: left;
 }
 
 .active {
