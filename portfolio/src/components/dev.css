@@ -1,17 +1,24 @@
 .devCard {
   min-height: 80%;
   color: #DDDDDD;
-  background-color: #131313;
-  box-shadow: 0px 5px 5px 1px #777777;
+  background-color: #6c757d;
+
   border-radius: 2px;
+  grid-column: 1/7;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: #AAAAAA;
 }
 
 .devBox {
-  height: 100px;
-  width: auto;
-  margin-left: 10px;
-  margin-right: 10px;
-
+  min-height: 50px;
+  min-width: 90vw;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
 }
 
 @media only screen and (max-width: 600px) {
