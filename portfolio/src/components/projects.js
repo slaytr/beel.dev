@@ -11,7 +11,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/LeetCode/blob/master/twosum.py">
           <div className="ProjectCardImage">
-            <i class="fab fa-github" style={{fontSize: 40}}></i>
+            <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>Two Sum</strong>
@@ -24,7 +24,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/LeetCode/blob/master/binarytreedistributecoins.py">
           <div className="ProjectCardImage">
-            <i class="fab fa-github" style={{fontSize: 40}}></i>
+            <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>Binary Tree Coin Distribution</strong>
@@ -37,7 +37,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/LeetCode/blob/master/longeststringchain.py">
           <div className="ProjectCardImage">
-        <i class="fab fa-github" style={{fontSize: 40}}></i>
+        <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>Longest String Chain</strong>
@@ -50,7 +50,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/LeetCode/blob/master/reverselinkedlist.py">
           <div className="ProjectCardImage">
-        <i class="fab fa-github" style={{fontSize: 40}}></i>
+        <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>Reverse a Linked List</strong>
@@ -63,7 +63,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/LeetCode/blob/master/hammingdistance.py">
           <div className="ProjectCardImage">
-        <i class="fab fa-github" style={{fontSize: 40}}></i>
+        <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>Hamming Distance</strong>
@@ -76,7 +76,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/LeetCode/blob/master/minimumaddparentheses.py">
           <div className="ProjectCardImage">
-        <i class="fab fa-github" style={{fontSize: 40}}></i>
+        <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>Minimum Parentheses</strong>
@@ -91,7 +91,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/myWebsite/tree/master/portfolio">
           <div className="ProjectCardImage">
-            <i class="fab fa-github" style={{fontSize: 40}}></i>
+            <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>Portfolio Website</strong>
@@ -104,7 +104,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://github.com/slaytr/Project-AWS/tree/master/CloudFormation">
           <div className="ProjectCardImage">
-            <i class="fab fa-github" style={{fontSize: 40}}></i>
+            <i className="fab fa-github" style={{fontSize: 40}}></i>
           </div>
           <div className="ProjectCardText">
             <strong>CloudFormation Webserver</strong>
@@ -119,7 +119,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://codepen.io/slaytr/pen/arqvYM">
           <div className="ProjectCardImage">
-          <i class="fab fa-codepen my-icon" style={{
+          <i className="fab fa-codepen my-icon" style={{
               marginRight: 15,
               fontSize: 40
             }}></i>
@@ -135,7 +135,7 @@ class Projects extends React.Component {
 
           <a className="ProjectCard" href="https://codepen.io/slaytr/pen/yWbmRv">
           <div className="ProjectCardImage">
-          <i class="fab fa-codepen my-icon" style={{
+          <i className="fab fa-codepen my-icon" style={{
               marginRight: 15,
               fontSize: 40
             }}></i>

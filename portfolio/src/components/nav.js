@@ -40,7 +40,7 @@ function NavMenu(props) {
           <div className="menu-item" style={{
               float: "right"
             }} onClick={props.handleClickMenu}>
-            <i class="fas fa-bars" style={{
+            <i className="fas fa-bars" style={{
                 paddingLeft: 10,
                 paddingRight: 10
               }}></i>
