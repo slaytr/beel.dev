@@ -20,7 +20,6 @@ class TechStack extends React.Component {
                 <p class="w3-large"><b>Frontend Frameworks</b></p>
                 <p><i class="fab fa-react w3-text-blue"></i> React (Preferred)</p>
                 <p><i class="fab fa-angular w3-text-red"></i> Angular</p>
-                <p><i class="iconify w3-text-green" data-icon="simple-icons:vue-dot-js" data-inline="false"></i> Vue</p>
                 <hr />
 
                 <p class="w3-large"><b>State Management</b></p>
@@ -117,8 +116,8 @@ class TechStack extends React.Component {
                 <p><span class="iconify" data-icon="logos:aws-route53" data-inline="false"></span> AWS Route 53</p>
                 <p><span class="iconify" data-icon="logos:aws-lambda" data-inline="false"></span> AWS Lambdas</p>
                 <p><span class="iconify" data-icon="logos:aws-ec2" data-inline="false"></span> AWS EC2</p>
-                <p><span class="iconify" data-icon="logos:aws" data-inline="false" style={{fontSize: 10}}></span> AWS Elastic Beanstalk</p>
-                <p><span class="iconify" data-icon="logos:aws" data-inline="false" style={{fontSize: 10}}></span> AWS Lightsail</p>
+                <p><span class="iconify" data-icon="logos:aws-cloudformation" data-inline="false"></span> AWS Cloud Formation</p>
+                <p><span class="iconify" data-icon="logos:aws-cloudfront" data-inline="false"></span> AWS Cloud Front</p>
                 <hr />
 
                 <p class="w3-large"><b>Containers and Tools</b></p>

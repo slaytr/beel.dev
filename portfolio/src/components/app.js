@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, Switch, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Redirect, Switch, BrowserRouter as Router } from 'react-router-dom'
 import Resume from './resume';
 import TechStack from './techstack';
 import Projects from './projects';
@@ -27,7 +27,7 @@ class App extends React.Component {
 
   updateDimensions = () => {
     this.setState({height: window.innerHeight, width: window.innerWidth});
-  }
+  };
 
   handleClickMenu = () => {
     if (this.state.barMenu === "hide"){
@@ -36,6 +36,10 @@ class App extends React.Component {
     this.setState(state => ({barMenu: "hide"}));
   }
   };
+  handleSubmit = () => {
+      this.setState({ redirect: true });
+    };
+
 
   render() {
 
@@ -49,13 +53,17 @@ class App extends React.Component {
             handleClickMenu={this.handleClickMenu}/>
 
           <section className="PortfolioPage">
-            <Route path="/" component={MyStory} exact/>
+          <Switch>
+            <Route path="/" component={MyStory} exact>
+              <Redirect to="/MyStory"/>
+            </Route>
 
             <Route path="/MyStory" component={MyStory} exact/>
             <Route path="/Resume" component={Resume} exact/>
             <Route path="/MyStack" component={TechStack} exact/>
             <Route path="/Projects" component={Projects} exact/>
             <Route path="/Dev" component={Dev} exact/>
+            </Switch>
           </section>
 
           <Footer />
