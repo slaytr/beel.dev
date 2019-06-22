@@ -5,6 +5,7 @@ class Dev extends React.Component {
   render() {
     return (
       <div style={{maxWidth: 1400}}>
+            <div className="w3-container w3-text-dark-grey"><h1>Public Dev History</h1></div>
         <div className="devBox">
         <div className="devCard">
           <p>23/06/19 // Created Projects, added project sections</p>

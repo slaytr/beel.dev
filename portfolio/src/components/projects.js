@@ -5,7 +5,7 @@ class Projects extends React.Component {
   render() {
     return (
       <div style={{maxWidth: 1400}}>
-      <h2> Projects </h2>
+      <div className="w3-container w3-text-dark-grey"><h1>Projects</h1></div>
         <div className="ProjectBox" id="style-7">
           <div className="ProjectBoxTitle">ALGORITHM SOLVING</div>
 
@@ -115,6 +115,39 @@ class Projects extends React.Component {
           </div>
           </a>
 
+          <div className="ProjectBoxTitle">DESIGN</div>
+
+          <a className="ProjectCard" href="https://codepen.io/slaytr/pen/arqvYM">
+          <div className="ProjectCardImage">
+          <i class="fab fa-codepen my-icon" style={{
+              marginRight: 15,
+              fontSize: 40
+            }}></i>
+          </div>
+          <div className="ProjectCardText">
+            <strong>Codepen Project - Planets Design Challenge</strong>
+            <br />
+            Create and design a planet themed project in HTML, CSS and Javascript
+            <br/>
+            <i style={{fontSize:12}}>Design, User Experience, Creative</i>
+          </div>
+          </a>
+
+          <a className="ProjectCard" href="https://codepen.io/slaytr/pen/yWbmRv">
+          <div className="ProjectCardImage">
+          <i class="fab fa-codepen my-icon" style={{
+              marginRight: 15,
+              fontSize: 40
+            }}></i>
+          </div>
+          <div className="ProjectCardText">
+            <strong>Codepen Project - Expanding Column Layout</strong>
+            <br />
+            Colourful, responsive multi-column layout with smooth animations
+            <br/>
+            <i style={{fontSize:12}}>Animation, User Interface, Layouts</i>
+          </div>
+          </a>
 
         </div>
       </div>
