@@ -46,11 +46,12 @@ export default function LandingPage(props) {
 
     useEffect(() => {
         const featureTextTimer = setTimeout(() => {
+            // Reset the DOM Content
             setFeatureText("");
-            setTimeout(()=>{
-                setFeatureTextIndex((featureTextIndex + 1) % 3);
-                setFeatureText(landingTextOptions[(featureTextIndex + 1) % 3]);
-            },5)
+
+            // Set the next Feature Text
+            setFeatureTextIndex((featureTextIndex + 1) % 3);
+            setFeatureText(landingTextOptions[(featureTextIndex + 1) % 3]);
         },3500);
         return () => clearTimeout(featureTextTimer)
     });
