@@ -29,28 +29,32 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
     const classes = useStyles();
     const {...rest} = props;
-    const [index, setIndex] = useState(0);
     const landingTextOptions = ["Developer", "Engineer", "Architect"];
+    const [featureText, setFeatureText] = useState("Developer");
+    const [featureTextIndex, setFeatureTextIndex] = useState(0);
 
     const landingContent = () => {
         const items = [];
-        for (let character of landingTextOptions[index]) {
+        for (let character of featureText) {
             items.push(<div>{character}</div>)
         }
         return (<Anime easing="easeInExpo"
-           duration={600}
-           delay={(el, i) => i * 60}
-           opacity={[0, 1]}
-           scale={[0.3, 1]}
+                       duration={600}
+                       delay={(el, i) => i * 60}
+                       opacity={[0, 1]}
+                       scale={[0.3, 1]}
         >{items}</Anime>)
     };
 
-    useEffect(()=>{
-        const timer = setTimeout(()=>{
-            setIndex((index+1)%3)
-            // console.log(landingTextOptions[index])
-        }, 3000);
-        return () => clearTimeout(timer)
+    useEffect(() => {
+        const featureTextTimer = setTimeout(() => {
+            setFeatureText("");
+            setTimeout(()=>{
+                setFeatureTextIndex((featureTextIndex + 1) % 3);
+                setFeatureText(landingTextOptions[(featureTextIndex + 1) % 3]);
+            },5)
+        },3500);
+        return () => clearTimeout(featureTextTimer)
     });
 
     return (
@@ -71,7 +75,7 @@ export default function LandingPage(props) {
                 <div className={classes.container}>
                     <GridContainer>
                         <GridItem xs={12} sm={12} md={8}>
-                            <h1 className={classNames(classes.title)} style={{display:"flex", flexDirection: "row"}}>
+                            <h1 className={classNames(classes.title)} style={{display: "flex", flexDirection: "row"}}>
                                 {landingContent()}
                             </h1>
                         </GridItem>
