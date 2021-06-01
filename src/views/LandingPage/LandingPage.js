@@ -17,10 +17,8 @@ import Anime from 'react-anime';
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
 import {useState, useEffect} from "react";
+import LandingSection from "./Sections/LandingSection";
 
 const dashboardRoutes = [];
 
@@ -84,9 +82,7 @@ export default function LandingPage(props) {
             </Parallax>
             <div className={classNames(classes.main)}>
                 <div className={classes.container}>
-                    <ProductSection/>
-                    <TeamSection/>
-                    <WorkSection/>
+                    <LandingSection/>
                 </div>
             </div>
             <Footer/>
