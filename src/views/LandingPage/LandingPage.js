@@ -39,10 +39,10 @@ export default function LandingPage(props) {
             items.push(<div>{character}</div>)
         }
         return (<Anime easing="easeInExpo"
-                       duration={600}
+                       duration={300}
                        delay={(el, i) => i * 60}
                        opacity={[0, 1]}
-                       scale={[0.3, 1]}
+                       scale={[0.8, 1]}
         >{items}</Anime>)
     };
 
@@ -54,7 +54,7 @@ export default function LandingPage(props) {
             // Set the next Feature Text
             setFeatureTextIndex((featureTextIndex + 1) % 3);
             setFeatureText(landingTextOptions[(featureTextIndex + 1) % 3]);
-        },3500);
+        },4000);
         return () => clearTimeout(featureTextTimer)
     });
 
