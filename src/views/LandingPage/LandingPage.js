@@ -29,8 +29,8 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
     const classes = useStyles();
     const {...rest} = props;
-    const landingTextOptions = ["Developer", "Engineer", "Architect"];
-    const [featureText, setFeatureText] = useState("Developer");
+    const landingTextOptions = ["Develop", "Engineer", "Architect"];
+    const [featureText, setFeatureText] = useState("Develop");
     const [featureTextIndex, setFeatureTextIndex] = useState(0);
 
     const landingContent = () => {
@@ -79,6 +79,11 @@ export default function LandingPage(props) {
                             <h1 className={classNames(classes.title)} style={{display: "flex", flexDirection: "row"}}>
                                 {landingContent()}
                             </h1>
+                        </GridItem>
+                        <GridItem xs={12} sm={12} md={8}>
+                            <h4 className={classes.description}>
+                                beel.dev is a hub for research, projects and more...
+                            </h4>
                         </GridItem>
                     </GridContainer>
                 </div>

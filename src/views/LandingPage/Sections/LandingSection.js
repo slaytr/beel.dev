@@ -8,9 +8,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import EngineerAnimation from "components/Animations/Engineer";
-import image from "assets/img/faces/avatar.jpg";
+import ComputerAnimation from "components/Animations/Computer";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/landingStyle.js";
+import Button from "components/CustomButtons/Button.js";
 
 const useStyles = makeStyles(styles);
 
@@ -32,24 +33,25 @@ export default function LandingSection() {
             <EngineerAnimation/>
         </GridItem>
       </GridContainer>
-      {/*<GridContainer justify="center" style={{marginTop: "80px"}}>*/}
-      {/*  <GridItem cs={12} sm={6} md={6} className={classes.imgContainer}>*/}
-      {/*    <img*/}
-      {/*        src={image}*/}
-      {/*        alt="..."*/}
-      {/*        className={classes.img}*/}
-      {/*    />*/}
-      {/*  </GridItem>*/}
-      {/*  <GridItem cs={12} sm={6} md={6}>*/}
-      {/*    <h1 className={classes.title}>Hi, I'm Bill</h1>*/}
-      {/*    <h3 className={classes.title}>I like to build software.</h3>*/}
-      {/*    <h4 className={classes.description}>*/}
-      {/*      I’m a kiwi engineer from New Zealand.*/}
-      {/*      I’ve helped create software ranging from cutting-edge storage software used by global academic institutions*/}
-      {/*      through to SaaS platforms and tools used by over 10,000’s of businesses across the planet.*/}
-      {/*    </h4>*/}
-      {/*  </GridItem>*/}
-      {/*</GridContainer>*/}
+      <GridContainer justify="center" style={{marginTop: "50px"}}>
+        <GridItem cs={12} sm={6} md={6} className={classes.imgContainer}>
+          <ComputerAnimation/>
+        </GridItem>
+        <GridItem cs={12} sm={6} md={6}>
+          <h3 className={classes.title}>Checkout my things</h3>
+          <h4 className={classes.description}>
+            Things are great. Things are supposed to be shared and used. All the things i've worked on can be found as solutions.
+          </h4>
+          <Button
+              color="rose"
+              size="lg"
+              href="/solutions"
+              style={{marginTop:"20px"}}
+          >
+            View Solutions
+          </Button>
+        </GridItem>
+      </GridContainer>
     </div>
   );
 }
