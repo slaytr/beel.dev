@@ -34,6 +34,8 @@ export default function LandingSection() {
               className={classes.img}
           />
         </GridItem>
+      </GridContainer>
+      <GridContainer justify="center" margin="">
         <GridItem cs={12} sm={6} md={6} className={classes.imgContainer}>
           <img
               src={image}

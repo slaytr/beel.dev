@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
-import LegendaryCursor from "legendary-cursor";
+// import LegendaryCursor from "legendary-cursor";
 
 import "assets/scss/material-kit-react.scss?v=1.10.0";
 
@@ -17,25 +17,25 @@ var hist = createBrowserHistory();
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-      <Route path="/landing-page" component={LandingPage} />
-      <Route path="/profile-page" component={ProfilePage} />
-      <Route path="/login-page" component={LoginPage} />
-      <Route path="/" component={Components} />
+      <Route exact path="/" component={LandingPage} />
+      <Route exact path="/profile-page" component={ProfilePage} />
+      <Route exact path="/login-page" component={LoginPage} />
+      <Route exact path="/components" component={Components} />
     </Switch>
   </Router>,
   document.getElementById("root")
 );
 
-window.addEventListener("load", () => {
-    LegendaryCursor.init({
-        lineSize:         0.06,
-        opacityDecrement: 0.8,
-        speedExpFactor:   0.8,
-        lineExpFactor:    0.6,
-        sparklesCount:    20,
-        maxOpacity:       0.50,  // should be a number between [0 ... 1]
-        // texture1:         "http://path_to_texture",      // texture displayed on mouse hover
-        // texture2:         "http://path_to_texture",      // texture displayed on mouse click
-        // texture3:         "http://path_to_texture",      // texture displayed on sparkles
-    });
-});
+// window.addEventListener("load", () => {
+//     LegendaryCursor.init({
+//         lineSize:         0.15,
+//         opacityDecrement: 0.8,
+//         speedExpFactor:   0.8,
+//         lineExpFactor:    0.6,
+//         sparklesCount:    65,
+//         maxOpacity:       0.90,  // should be a number between [0 ... 1]
+//         // texture1:         "http://path_to_texture",      // texture displayed on mouse hover
+//         // texture2:         "http://path_to_texture",      // texture displayed on mouse click
+//         // texture3:         "http://path_to_texture",      // texture displayed on sparkles
+//     });
+// });
