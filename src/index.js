@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router-dom";
+import {createBrowserHistory} from "history";
+import {Router, Route, Switch} from "react-router-dom";
 // import LegendaryCursor from "legendary-cursor";
 
 import "assets/scss/material-kit-react.scss?v=1.10.0";
@@ -14,22 +14,24 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import SolutionsPage from "views/SolutionsPage/SolutionsPage";
 import DeepSummaryPage from "views/SolutionsPage/Solutions/DeepSummaryPage";
 import OpenSourcePage from "./views/OpenSourcePage/OpenSourcePage";
+import NotFoundPage from "./views/NotFoundPage/NotFoundPage";
 
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route exact path="/" component={LandingPage} />
-        <Route exact path="/solutions" component={SolutionsPage} />
-        <Route exact path="/solutions/deep-summary" component={DeepSummaryPage} />
-        <Route exact path="/open-source" component={OpenSourcePage} />
-        <Route exact path="/profile-page" component={ProfilePage} />
-      <Route exact path="/login-page" component={LoginPage} />
-      <Route exact path="/components" component={Components} />
-    </Switch>
-  </Router>,
-  document.getElementById("root")
+    <Router history={hist}>
+        <Switch>
+            <Route exact path="/" component={LandingPage}/>
+            <Route component={NotFoundPage}/>
+            <Route exact path="/solutions" component={SolutionsPage}/>
+            <Route exact path="/solutions/deep-summary" component={DeepSummaryPage}/>
+            <Route exact path="/open-source" component={OpenSourcePage}/>
+            <Route exact path="/profile-page" component={ProfilePage}/>
+            <Route exact path="/login-page" component={LoginPage}/>
+            <Route exact path="/components" component={Components}/>
+        </Switch>
+    </Router>,
+    document.getElementById("root")
 );
 
 // window.addEventListener("load", () => {
