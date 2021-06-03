@@ -19,14 +19,14 @@ import Parallax from "components/Parallax/ShortParallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import SolutionsSection from "./Sections/SolutionsSection";
+import OpenSourceSection from "./Sections/OpenSourceSection";
 import Typist from "react-typist";
 
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
-export default function SolutionsPage(props) {
+export default function OpenSourcePage(props) {
     const classes = useStyles();
     const {...rest} = props;
 
@@ -49,12 +49,12 @@ export default function SolutionsPage(props) {
                     <GridContainer>
                         <GridItem xs={12} sm={12} md={8}>
                             <h1 className={classNames(classes.title)} style={{display: "flex", flexDirection: "row"}}>
-                                <Typist cursor={{show:false}}>Solutions</Typist>
+                                <Typist cursor={{show:false}}>Open Source</Typist>
                             </h1>
                         </GridItem>
                         <GridItem xs={12} sm={12} md={8}>
                             <h4 className={classes.description}>
-                                Things, all the things that do stuff
+                                My contributions to Open Source projects
                             </h4>
                         </GridItem>
                     </GridContainer>
@@ -62,7 +62,7 @@ export default function SolutionsPage(props) {
             </Parallax>
             <div className={classNames(classes.main)}>
                 <div className={classes.container}>
-                    <SolutionsSection/>
+                    <OpenSourceSection/>
                 </div>
             </div>
             <Footer/>

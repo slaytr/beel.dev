@@ -23,25 +23,24 @@ export default function SolutionsSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={6} md={6}>
-          <h1 className={classes.title}>Cross Contrast</h1>
-          <h3 className={classes.title}>Automatically calculate multiple WCAG colour combinations in realtime</h3>
-          <Badge color="success">Released</Badge>
+          <h1 className={classes.title}>Deep Summary</h1>
+          <h3 className={classes.title}>Automatically converts code to plain english</h3>
+          <Badge color="info">In Progress</Badge>
           <h4 className={classes.description}>
-            A helpful tool created as a by-product of a postgraduate research project to determine relevant
-            usability requirements for a machine learning application called WEKA.
+            Ever wanted to know what code does without reading the code?
+            This tool uses deep learning to analyze static code and explain what it does in plain english.
           </h4>
           <Button
               color="primary"
               size="lg"
-              href="https://www.crosscontrast.com"
-              target="_blank"
+              href="/solutions/deep-summary"
               style={{marginTop:"20px"}}
           >
-            Cross Contrast
+            Deep Summary
           </Button>
         </GridItem>
         <GridItem cs={12} sm={6} md={6} className={classes.imgContainer}>
-            <ShadesAnimation/>
+          <SummaryAnimation/>
         </GridItem>
       </GridContainer>
       <GridContainer justify="center" style={{marginTop: "50px"}}>
@@ -69,24 +68,25 @@ export default function SolutionsSection() {
       </GridContainer>
       <GridContainer justify="center" style={{marginTop: "50px"}}>
         <GridItem cs={12} sm={6} md={6}>
-          <h1 className={classes.title}>Deep Summary</h1>
-          <h3 className={classes.title}>Automatically converts code to plain english</h3>
-          <Badge color="info">In Progress</Badge>
+          <h1 className={classes.title}>Cross Contrast</h1>
+          <h3 className={classes.title}>Automatically calculate multiple WCAG colour combinations in realtime</h3>
+          <Badge color="success">Released</Badge>
           <h4 className={classes.description}>
-            Ever wanted to know what code does without reading the code?
-            This tool uses deep learning to analyze static code and explain what it does in plain english.
+            A helpful tool created as a by-product of a postgraduate research project to determine relevant
+            usability requirements for a machine learning application called WEKA.
           </h4>
           <Button
               color="primary"
               size="lg"
-              href="/solutions/deep-summary"
+              href="https://www.crosscontrast.com"
+              target="_blank"
               style={{marginTop:"20px"}}
           >
-            Deep Summary
+            Cross Contrast
           </Button>
         </GridItem>
         <GridItem cs={12} sm={6} md={6} className={classes.imgContainer}>
-          <SummaryAnimation/>
+          <ShadesAnimation/>
         </GridItem>
       </GridContainer>
     </div>

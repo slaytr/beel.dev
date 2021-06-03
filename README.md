@@ -182,8 +182,8 @@ material-kit-react
         │       ├── SectionPills.js
         │       ├── SectionTabs.js
         │       └── SectionTypography.js
-        ├── SolutionsPage
-        │   ├── SolutionsPage.js
+        ├── OpenSourcePage
+        │   ├── OpenSourcePage.js
         │   └── Sections
         │       ├── ProductSection.js
         │       ├── TeamSection.js

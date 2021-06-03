@@ -109,6 +109,14 @@ export default function ProfilePage(props) {
                             <p>Deep Summary Version 1.0.0</p>
                             <p>Initial Build</p>
                         </div>
+                        <div className={classes.description}>
+                            <p >
+                                Deep Summary reads a block of code and automatically it into plain english using
+                                AI <br/>
+                                OpenAI API - Davinci Engine | Autoregressive Language Model<br/>
+                                Version 1 is designed to support React Javascript
+                            </p>
+                        </div>
                         <GridContainer justify="center">
                             <GridItem xs={12} sm={12} md={12} style={{marginTop: "60px"}}>
                                 <Button color="info" disabled>Example 1</Button>
@@ -159,14 +167,6 @@ export default function ProfilePage(props) {
                                 </Animated>
                             </GridItem>
                         </GridContainer>
-                        <div className={classes.description} style={{padding:"0 0 60px 0"}}>
-                            <p>
-                                Deep Summary reads a block of code and automatically it into plain english using
-                                AI <br/>
-                                OpenAI API - Davinci Engine | Autoregressive Language Model<br/>
-                                Version 1 is designed to support React Javascript
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>

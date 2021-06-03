@@ -51,7 +51,6 @@ export default function Footer(props) {
               <a
                 href="/open-source"
                 className={classes.block}
-                target="_blank"
               >
                 Open Source
               </a>
@@ -60,7 +59,6 @@ export default function Footer(props) {
               <a
                 href="/about"
                 className={classes.block}
-                target="_blank"
               >
                 About
               </a>

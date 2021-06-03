@@ -43,7 +43,7 @@ export default function LandingSection() {
             Things are great. Things are supposed to be shared and used. All the things i've worked on can be found as solutions.
           </h4>
           <Button
-              color="rose"
+              color="primary"
               size="lg"
               href="/solutions"
               style={{marginTop:"20px"}}
