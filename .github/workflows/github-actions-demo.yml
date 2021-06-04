@@ -37,6 +37,6 @@ jobs:
 
       - name: Copy files to the production website with the AWS CLI
         run: |
-          aws s3 sync . s3://beel.dev
+          aws s3 sync ${{ github.workspace }}/build s3://beel.dev
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
