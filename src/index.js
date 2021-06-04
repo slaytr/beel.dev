@@ -22,13 +22,13 @@ ReactDOM.render(
     <Router history={hist}>
         <Switch>
             <Route exact path="/" component={LandingPage}/>
-            <Route component={NotFoundPage}/>
             <Route exact path="/solutions" component={SolutionsPage}/>
             <Route exact path="/solutions/deep-summary" component={DeepSummaryPage}/>
             <Route exact path="/open-source" component={OpenSourcePage}/>
             <Route exact path="/profile-page" component={ProfilePage}/>
             <Route exact path="/login-page" component={LoginPage}/>
             <Route exact path="/components" component={Components}/>
+            <Route component={NotFoundPage}/>
         </Switch>
     </Router>,
     document.getElementById("root")
