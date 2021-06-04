@@ -5,7 +5,7 @@ on:
       master
       develop
 jobs:
-  Explore-GitHub-Actions:
+  Deploy to AWS S3:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
