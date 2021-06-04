@@ -19,13 +19,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-southeast-2
 
-      - name: List files in the repository
+      - name: Go to repository directory and list files
         run: |
-          ls ${{ github.workspace }}
-
-      - name: Go to repository directory
-        run: |
-          cd ${{ github.workspace }}
+          cd ${{ github.workspace }} && ls
 
       - name: Build production release files
         run: |
