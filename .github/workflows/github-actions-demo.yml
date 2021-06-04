@@ -5,14 +5,11 @@ on:
       - master
       - develop
 jobs:
-  DeployToS3:
+  Deploy:
+    name: Upload to Amazon S3
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "This job is testing on GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
+    steps:
       - name: Check out repository code
         uses: actions/checkout@v2
 
@@ -22,11 +19,25 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-southeast-2
-      - run: aws s3 ls
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+
+#      - name: Copy files to the test website with the AWS CLI
+#        run: |
+#          aws s3 sync . s3://my-s3-test-website-bucket
 
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+
+      - name: Go to repository directory
+        run: |
+          cd ${{ github.workspace }}
+
+      - name: Build production release files
+        run: |
+          npm i && npm run build
+
+      - name: Check build files
+        run: |
+          cd build && ls
+
       - run: echo "🍏 This job's status is ${{ job.status }}."
