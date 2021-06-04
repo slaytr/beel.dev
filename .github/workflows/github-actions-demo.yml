@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - develop
 jobs:
   Deploy:
     name: Upload to Amazon S3
@@ -20,10 +19,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-southeast-2
 
-#      - name: Copy files to the test website with the AWS CLI
-#        run: |
-#          aws s3 sync . s3://my-s3-test-website-bucket
-
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
@@ -39,5 +34,9 @@ jobs:
       - name: Check build files
         run: |
           cd build && ls
+
+      - name: Copy files to the production website with the AWS CLI
+        run: |
+          aws s3 sync . s3://beel.dev
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
