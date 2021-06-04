@@ -2,8 +2,8 @@ name: Deploy to AWS S3 (Production)
 on:
   push:
     branches:
-      master
-      develop
+      - master
+      - develop
 jobs:
   Deploy to AWS S3:
     runs-on: ubuntu-latest
