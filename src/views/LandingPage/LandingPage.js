@@ -19,8 +19,8 @@ import Parallax from "components/Parallax/LandingParallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import {useState, useEffect} from "react";
 import LandingSection from "./Sections/LandingSection";
+import Typist from "react-typist";
 
 const dashboardRoutes = [];
 
@@ -29,34 +29,6 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
     const classes = useStyles();
     const {...rest} = props;
-    const landingTextOptions = ["Develop", "Engineer", "Architect"];
-    const [featureText, setFeatureText] = useState("Develop");
-    const [featureTextIndex, setFeatureTextIndex] = useState(0);
-
-    const landingContent = () => {
-        const items = [];
-        for (let character of featureText) {
-            items.push(<div>{character}</div>)
-        }
-        return (<Anime easing="easeInExpo"
-                       duration={300}
-                       delay={(el, i) => i * 60}
-                       opacity={[0, 1]}
-                       scale={[0.8, 1]}
-        >{items}</Anime>)
-    };
-
-    useEffect(() => {
-        const featureTextTimer = setTimeout(() => {
-            // Reset the DOM Content
-            setFeatureText("");
-
-            // Set the next Feature Text
-            setFeatureTextIndex((featureTextIndex + 1) % 3);
-            setFeatureText(landingTextOptions[(featureTextIndex + 1) % 3]);
-        },4000);
-        return () => clearTimeout(featureTextTimer)
-    });
 
     return (
         <div>
@@ -75,9 +47,9 @@ export default function LandingPage(props) {
             <Parallax filter image={require("assets/img/landing-background.png").default}>
                 <div className={classes.container}>
                     <GridContainer>
-                        <GridItem xs={12} sm={12} md={8}>
+                        <GridItem xs={12} sm={12} md={12}>
                             <h1 className={classNames(classes.title)} style={{display: "flex", flexDirection: "row"}}>
-                                {landingContent()}
+                                <Typist cursor={{show:false}}>Architect | Engineer | Develop</Typist>
                             </h1>
                         </GridItem>
                         <GridItem xs={12} sm={12} md={8}>
