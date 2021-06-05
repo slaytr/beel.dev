@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -29,6 +29,19 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
     const classes = useStyles();
     const {...rest} = props;
+    const [featureContent, setFeatureContent] = useState((<Typist cursor={{show: false}}>Develop</Typist>));
+    const [featureIndex, setFeatureIndex] = useState(0);
+    const featureTitleOptions = ["Architect", "Engineer", "Develop"];
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setFeatureContent("");
+            const newIndex = (featureIndex+1)%3;
+            setFeatureIndex(newIndex);
+            setFeatureContent(<Typist cursor={{show: false}}>{featureTitleOptions[newIndex]}</Typist>)
+        }, 3000);
+        return () => clearTimeout(timer)
+    });
 
     return (
         <div>
@@ -49,7 +62,8 @@ export default function LandingPage(props) {
                     <GridContainer>
                         <GridItem xs={12} sm={12} md={12}>
                             <h1 className={classNames(classes.title)} style={{display: "flex", flexDirection: "row"}}>
-                                <Typist cursor={{show:false}}>Architect | Engineer | Develop</Typist>
+                                {/*<Typist cursor={{show:false}}>Develop</Typist>*/}
+                                {featureContent}
                             </h1>
                         </GridItem>
                         <GridItem xs={12} sm={12} md={8}>
