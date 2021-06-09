@@ -60,7 +60,6 @@ export default function LandingPage(props) {
                     <GridContainer>
                         <GridItem xs={12} sm={12} md={12}>
                             <h1 className={classNames(classes.title)} style={{display: "flex", flexDirection: "row"}}>
-                                {/*<Typist cursor={{show:false}}>Develop</Typist>*/}
                                 {featureContent}
                             </h1>
                         </GridItem>

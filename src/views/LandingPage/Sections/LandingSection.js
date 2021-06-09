@@ -26,7 +26,7 @@ export default function LandingSection() {
                     <h3 className={classes.title}>I like to build software.</h3>
                     <h4 className={classes.description}>
                         I’m a kiwi hailing from the heart of New Zealand.
-                        I’ve helped create some cools things from cutting-edge storage software used by renowned
+                        I’ve helped create some cool things from cutting-edge storage software used by renowned
                         universities
                         through to different flavours of Software as a Service consumed by over 10,000’s of businesses
                         across the planet.
