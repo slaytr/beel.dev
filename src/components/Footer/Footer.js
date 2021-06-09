@@ -55,14 +55,14 @@ export default function Footer(props) {
                 Open Source
               </a>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="/about"
-                className={classes.block}
-              >
-                About
-              </a>
-            </ListItem>
+            {/*<ListItem className={classes.inlineBlock}>*/}
+            {/*  <a*/}
+            {/*    href="/about"*/}
+            {/*    className={classes.block}*/}
+            {/*  >*/}
+            {/*    About*/}
+            {/*  </a>*/}
+            {/*</ListItem>*/}
           </List>
         </div>
         <div className={classes.right}>
