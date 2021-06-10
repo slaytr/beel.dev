@@ -88,7 +88,7 @@ export default function ProfilePage(props) {
             <Parallax
                 small
                 filter
-                image={require("assets/img/landing-background.png").default}
+                image={require("assets/img/coding-bg.jpg").default}
             >
                 <div className={classes.container}>
                     <GridContainer>
