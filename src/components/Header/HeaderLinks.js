@@ -68,15 +68,15 @@ export default function HeaderLinks(props) {
                     Open Source
                 </Button>
             </ListItem>
-            <ListItem className={classes.listItem}>
-                <Button
-                    href="/about"
-                    color="transparent"
-                    className={classes.navLink}
-                >
-                    About
-                </Button>
-            </ListItem>
+            {/*<ListItem className={classes.listItem}>*/}
+            {/*    <Button*/}
+            {/*        href="/about"*/}
+            {/*        color="transparent"*/}
+            {/*        className={classes.navLink}*/}
+            {/*    >*/}
+            {/*        About*/}
+            {/*    </Button>*/}
+            {/*</ListItem>*/}
             <ListItem className={classes.listItem}>
                 <Tooltip
                     id="headerlink-linkedin"

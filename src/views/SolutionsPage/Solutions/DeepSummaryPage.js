@@ -24,6 +24,9 @@ import summary from "assets/img/summary.png";
 import styles from "assets/jss/material-kit-react/views/deepSummaryPage.js";
 import Card from "components/Card/Card";
 
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
@@ -62,6 +65,13 @@ export default function ProfilePage(props) {
             return (<Typist avgTypingDelay={20}>{deepSummary}</Typist>)
         }
     };
+
+    const contentElevation = () => {
+        const theme = useTheme();
+        const elevate = useMediaQuery(theme.breakpoints.up('sm'));
+        return elevate ? classes.mainRaised : "";
+    };
+
     return (
         <div>
             <Header
@@ -78,7 +88,7 @@ export default function ProfilePage(props) {
             <Parallax
                 small
                 filter
-                image={require("assets/img/landing-background.png").default}
+                image={require("assets/img/coding-bg.jpg").default}
             >
                 <div className={classes.container}>
                     <GridContainer>
@@ -93,7 +103,7 @@ export default function ProfilePage(props) {
                 </div>
             </Parallax>
 
-            <div className={classNames(classes.main, classes.mainRaised)}>
+            <div className={classNames(classes.main, contentElevation())}>
                 <div>
                     <div className={classes.container}>
                         <GridContainer justify="center">

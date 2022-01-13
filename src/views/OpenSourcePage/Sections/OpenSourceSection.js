@@ -16,6 +16,7 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/land
 import Button from "components/CustomButtons/Button.js";
 import Badge from "components/Badge/Badge";
 import {Animated} from "react-animated-css";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles(styles);
 
@@ -30,45 +31,50 @@ export default function OpenSourceSection() {
                         infrastructure - Commerical</h3>
                     <h4 className={classes.description}>
                         As a huge advocate of serverless technology, I drove the initiative at Rocketspark to leverage
-                      serverless framework to construct their cloud infrastructure. I loved it so much and wanted to help
-                      others have a smoother experience so I worked to publish a serverless example which is now officially recognised.
+                        serverless framework to construct their cloud infrastructure. I loved it so much and wanted to
+                        help
+                        others have a smoother experience so I worked to publish a serverless example which is now
+                        officially recognised.
                     </h4>
                     <Button
                         color="primary"
-                        size="lg"
                         href="https://www.serverless.com/"
-                        style={{marginTop: "20px"}}
+                        style={{marginTop: "20px", marginRight: "20px"}}
                         round="true"
                     >
                         More Info
                     </Button>
                     <Button
                         color="primary"
-                        size="lg"
                         href="https://github.com/serverless/examples"
-                        style={{marginTop: "20px", marginLeft: "20px"}}
+                        style={{marginTop: "20px",  marginRight: "20px"}}
                         round="true"
                     >
                         Github Repo
                     </Button>
                     <Button
                         color="primary"
-                        size="lg"
                         href="https://github.com/slaytr/aws-node-screenshot-to-s3"
-                        style={{marginTop: "20px", marginLeft: "20px"}}
+                        style={{marginTop: "20px"}}
                         round="true"
                     >
                         Contribution
                     </Button>
                 </GridItem>
-                <GridItem cs={12} sm={4} md={4} className={classes.imgContainer}>
-                    <img src={slsLogo} style={{maxWidth: "300px", width: "auto", height: "auto", maxHeight: "300px"}}/>
-                </GridItem>
+                <Hidden xsDown>
+                    <GridItem cs={12} sm={4} md={4} className={classes.imgContainer}>
+                        <img src={slsLogo}
+                             style={{maxWidth: "300px", width: "auto", height: "auto", maxHeight: "300px"}}/>
+                    </GridItem>
+                </Hidden>
             </GridContainer>
             <GridContainer justify="center" style={{marginTop: "50px"}}>
-                <GridItem cs={12} sm={6} md={6} className={classes.imgContainer}>
-                    <img src={uowLogo} style={{maxWidth: "300px", width: "auto", height: "auto", maxHeight: "400px"}}/>
-                </GridItem>
+                <Hidden xsDown>
+                    <GridItem cs={12} sm={6} md={6} className={classes.imgContainer}>
+                        <img src={uowLogo}
+                             style={{maxWidth: "300px", width: "auto", height: "auto", maxHeight: "400px"}}/>
+                    </GridItem>
+                </Hidden>
                 <GridItem cs={12} sm={6} md={6}>
                     <Animated animationIn="fadeInUp">
                         <h1 className={classes.title}>WEKA</h1>
@@ -82,31 +88,28 @@ export default function OpenSourceSection() {
                         </h4>
                         <Button
                             color="primary"
-                            size="lg"
                             href="https://www.cs.waikato.ac.nz/ml/weka/"
                             target="_blank"
                             round="true"
-                            style={{marginTop: "20px"}}
+                            style={{marginTop: "20px",  marginRight: "20px"}}
                         >
                             More Info
                         </Button>
                         <Button
                             color="primary"
-                            size="lg"
                             href="https://github.com/Waikato/weka-3.8"
                             target="_blank"
                             round="true"
-                            style={{marginTop: "20px", marginLeft: "20px"}}
+                            style={{marginTop: "20px",  marginRight: "20px"}}
                         >
                             Github Repo
                         </Button>
                         <Button
                             color="primary"
-                            size="lg"
                             href="https://github.com/slaytr/weka-3.8/tree/themes"
                             target="_blank"
                             round="true"
-                            style={{marginTop: "20px", marginLeft: "20px"}}
+                            style={{marginTop: "20px"}}
                         >
                             Contribution
                         </Button>

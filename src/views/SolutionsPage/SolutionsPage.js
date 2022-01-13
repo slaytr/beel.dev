@@ -4,8 +4,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import {makeStyles} from "@material-ui/core/styles";
 
-// react-anime animations
-import Anime from 'react-anime';
 // @material-ui/icons
 
 // core components
