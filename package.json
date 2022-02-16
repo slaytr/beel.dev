@@ -1,66 +1,35 @@
 {
   "name": "beel.dev",
-  "version": "1.10.0",
-  "description": "beel.dev website and project hub",
+  "version": "1.0.0",
   "private": true,
-  "main": "src/index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "test": "jest"
+  },
   "dependencies": {
-    "@babel/core": "7.14.0",
-    "@material-ui/core": "4.11.4",
-    "@material-ui/icons": "4.11.2",
-    "ace-builds": "^1.4.12",
-    "classnames": "2.3.1",
-    "legendary-cursor": "^1.0.2",
-    "moment": "2.29.1",
-    "node-sass": "6.0.0",
-    "nouislider": "15.1.0",
-    "prop-types": "15.7.2",
-    "react": "17.0.2",
-    "react-ace": "^9.4.0",
-    "react-animated-css": "^1.2.1",
-    "react-datetime": "3.0.4",
-    "react-dom": "17.0.2",
-    "react-lottie": "^1.2.3",
-    "react-router-dom": "5.2.0",
-    "react-scripts": "4.0.3",
-    "react-slick": "0.28.1",
-    "react-typist": "^2.0.5"
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7"
   },
   "devDependencies": {
-    "@babel/cli": "7.13.16",
-    "@babel/plugin-proposal-class-properties": "7.13.0",
-    "@babel/preset-env": "7.14.1",
-    "@babel/preset-react": "7.13.13",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-react": "7.23.2",
-    "gulp": "4.0.2",
-    "gulp-append-prepend": "1.0.9",
-    "prettier": "2.3.0"
-  },
-  "optionalDependencies": {
-    "typescript": "4.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint:check": "eslint . --ext=js,jsx;  exit 0",
-    "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "build-package-css": "node-sass src/assets/scss/material-kit-react.scss dist/material-kit-react.css",
-    "build-package": "npm run build-package-css && babel src --out-dir dist",
-    "compile-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.css",
-    "minify-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.css --source-map true"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": []
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@vue/test-utils": "^1.2.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^27.0.5",
+    "eslint": "^7.29.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "jest": "^27.0.5",
+    "ts-jest": "^27.0.3",
+    "vue-jest": "^3.0.4"
   }
 }
