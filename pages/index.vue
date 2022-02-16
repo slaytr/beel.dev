@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <Meta>
+    <Home />
+  </Meta>
 </template>
 
 <script lang="ts">
